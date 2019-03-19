@@ -32,3 +32,10 @@ DELETE FROM "accounts" WHERE ("city" = 'miami' OR "city" = 'phoenix') AND "trans
 
 -- Anthony moved to Santa Fe.
 UPDATE "accounts" SET "city" = 'Santa Fe' WHERE "username" = 'Anthony';
+
+-- Grace closed her account.
+DELETE FROM "accounts" WHERE "username" = 'grace'
+
+-- Travis made a withdrawl of $20,000. What's their new balance? NOTE: Research RETURNING
+UPDATE "accounts" SET "account_balance" = ("account_balance" - 20000) WHERE "username" = 'travis';
+
